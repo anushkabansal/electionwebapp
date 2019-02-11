@@ -1,0 +1,11 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+  <h1>View Election Data </h1>
+  <h4>Welcome {{session.username}}</h4>
+  <ul class="list-group">
+    {% for each in candidates %}
+      <li class="list-group-item"><a href="entry/{{each.country}}/{{each.date}}">{{each.country}}--{{each.date}}</a></li>
+    {% endfor %}
+  </ul>
+{% endblock %}

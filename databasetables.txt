@@ -1,0 +1,34 @@
+
+DROP TABLE if EXISTS candidates;
+CREATE TABLE candidates (
+    ifpid  INT(11) ,
+    country  TEXT(20),
+    format  TEXT(20),
+    date  DATE,
+    candidatenumber INT(11),
+    candidateid INT(11) PRIMARY KEY,
+    candidatename varchar(40)
+);
+
+DROP TABLE if EXISTS articles;
+CREATE TABLE articles (id INT(11) AUTO_INCREMENT PRIMARY KEY,
+polldate DATE , fieldworkdate DATE , pollingfirm TEXT, samplesize INT(11), moe FLOAT, ifpid INT(11),country  TEXT(20),format  TEXT(20)
+);
+
+
+DROP TABLE if EXISTS articles;
+CREATE TABLE articles (
+	id INT(11) AUTO_INCREMENT PRIMARY KEY,
+    ifpid  INT(11),
+    country  TEXT(20),
+    format  TEXT(20),
+    date  DATE,
+    polldate DATE , 
+    fieldworkdate DATE , 
+    pollingfirm TEXT, 
+    samplesize INT(11),
+    moe FLOAT (11),
+    candidatenumber INT(11),
+    candidateid INT(11),
+    candidatename varchar(40)
+);

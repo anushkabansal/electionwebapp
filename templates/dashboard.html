@@ -1,0 +1,13 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+  <h1>Election Dashboard </h1>
+  <h4>Welcome {{session.username}}</h4>
+  <h6>click on the election to edit</h6>
+  <ul class="list-group">
+    {% for each in candidates %}
+      <li class="list-group-item"><a href="edit/{{each.country}}/{{each.date}}">{{each.country}}--{{each.date}}</a></li>
+    {% endfor %}
+  </ul>
+{% endblock %}
+

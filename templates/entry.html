@@ -1,0 +1,41 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+  <hr>
+<div class="table-responsive">
+  <table class="table table-striped">
+
+    <th> IFPID </th>
+    <th> COUNTRY </th>
+    <th> FORMAT </th>
+    <th> ELECTION DATE </th>
+    <th> POLL DATE </th>
+    <th> FIELD WORK DATE </th>
+    <th> POLLING FIRM </th>
+    <th> SAMPLE SIZE </th>
+    <th> MOE </th>
+    <th> LEAD </th>
+    <th> CANDIDATE NAMES </th>
+    <th> POLL NUMBERS </th>
+
+    {% for candidate in candidates %}
+      <tr>
+
+        <td>{{candidate.ifpid}}</td>
+        <td>{{candidate.country}}</td>
+        <td>{{candidate.eformat}}</td>
+        <td>{{candidate.date}}</td>
+        <td>{{candidate.polldate}}</td>
+        <td>{{candidate.fieldworkdate}}</td>
+        <td>{{candidate.pollingfirm}}</td>
+        <td>{{candidate.samplesize}}</td>
+        <td>{{candidate.moe}}</td>
+        <td>{{candidate.calculate}}</td>
+        <td>{{candidate.candidatenames}}</td>
+        <td>{{candidate.pollnumbers}}</td>
+    </tr>
+      </tr>
+    {% endfor %}
+  </table>
+</div>
+{% endblock %}

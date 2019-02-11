@@ -1,0 +1,33 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+  <h1>Edit Article</h1>
+  {% from "includes/_formhelpers.html" import render_field %}
+  <form method="POST" action="">
+    <div class="form-group">
+      {{render_field(form.polldate, class_="form-control")}}
+    </div>
+    <div class="form-group">
+      {{render_field(form.fieldworkdate, class_="form-control")}}
+    </div>
+    <div class="form-group">
+      {{render_field(form.pollingfirm, class_="form-control")}}
+    </div>
+    <div class="form-group">
+      {{render_field(form.samplesize, class_="form-control")}}
+    </div>
+    <div class="form-group">
+      {{render_field(form.moe, class_="form-control")}}
+    </div>
+    <div class="form-group">
+      {{render_field(form.calculate, class_="form-control")}}
+    </div>
+    <div class="form-group">
+      {{render_field(form.candidatenames, class_="form-control")}}
+    </div>
+    <div class="form-group">
+      {{render_field(form.pollnumbers, class_="form-control")}}
+    </div>
+    <p><input class="btn btn-info" type="submit" value="Submit">
+  </form>
+{% endblock %}
